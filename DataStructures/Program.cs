@@ -49,10 +49,10 @@ namespace DataStructures
             //DoublyLinkedList.AddToTail(Node6);
 
             var CircularLinkedList = new CircularLinkedList();
-            CircularLinkedList.AddFirst(Node4);
-            CircularLinkedList.AddFirst(Node5);
-            CircularLinkedList.AddFirst(Node6);
-
+            CircularLinkedList.AddToHead(Node4);
+            CircularLinkedList.AddToHead(Node5);
+            CircularLinkedList.AddToHead(Node6);
+            CircularLinkedList.DeleteNote(Node5);
         }
     }
 }

@@ -5,7 +5,7 @@
         private DoublyNode _head;
         private DoublyNode _tail;
 
-        public void AddLast (DoublyNode node)
+        public void AddToTail (DoublyNode node)
         {
             if (_head == null)
             {
@@ -23,7 +23,7 @@
                 _head.Prev = _tail;
             }
         }
-        public void AddFirst (DoublyNode node)
+        public void AddToHead (DoublyNode node)
         {
             if (_head == null)
             {
