@@ -43,11 +43,15 @@ namespace DataStructures
                 Data = 6
             };
 
-            var DoublyLinkedList = new DoublyLinkedList();
-            DoublyLinkedList.AddToTail(Node4);
-            DoublyLinkedList.AddToTail(Node5);
-            DoublyLinkedList.AddToTail(Node6);
+            //var DoublyLinkedList = new DoublyLinkedList();
+            //DoublyLinkedList.AddToTail(Node4);
+            //DoublyLinkedList.AddToTail(Node5);
+            //DoublyLinkedList.AddToTail(Node6);
 
+            var CircularLinkedList = new CircularLinkedList();
+            CircularLinkedList.AddFirst(Node4);
+            CircularLinkedList.AddFirst(Node5);
+            CircularLinkedList.AddFirst(Node6);
 
         }
     }

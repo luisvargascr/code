@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arrays.cs" />
+    <Compile Include="CircularLinkedList.cs" />
     <Compile Include="DoublyLinkedList.cs" />
     <Compile Include="DoublyNode.cs" />
     <Compile Include="SinglyLinkedList.cs" />
