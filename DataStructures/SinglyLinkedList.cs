@@ -2,9 +2,9 @@
 {
     public class SinglyLinkedList
     {
-        private Node _head;
+        private SingleNode _head;
 
-        public void AddToBeginning(Node node)
+        public void AddToBeginning(SingleNode node)
         {
             if (_head == null)
                 _head = node;
@@ -14,7 +14,7 @@
                 _head = node;
             }
         }
-        public void AddToEnd (Node node)
+        public void AddToEnd (SingleNode node)
         {
             if (_head == null)
             {
@@ -23,7 +23,7 @@
             else
             {
                 node.Next = null;
-                Node last = _head;
+                SingleNode last = _head;
 
                 while (last.Next != null)
                 {
@@ -32,61 +32,28 @@
                 last.Next = node;
             }
         }
-        public void DeleteNode(Node node)
+        public bool DeleteNode (SingleNode node)
         {
             if (_head == null)
-                return;
+                return false;
 
-            Node first = _head;
+            SingleNode Tmp = _head;
 
-            if (first.Data == node.Data)
+            if (Tmp.Data == node.Data)
             {
-                _head = first.Next;
-                return;
+                Tmp = Tmp.Next;
+                return true;
             }
-            while (first.Next != null)
+            while (Tmp.Next != null)
             {
-                if (first.Data != node.Data)
+                if (Tmp.Next.Data == node.Data)
                 {
-                    first = first.Next;
+                    Tmp.Next = Tmp.Next.Next;
+                    return true;
                 }
-                else
-                {
-                    first = first.Next;
-                    // first.Next = first.Next.Next;
-                }
+                Tmp = Tmp.Next;
             }
-        }
-
-        public void DeleteNode2(int position)
-        {
-            // If linked list is empty
-            if (_head == null)
-                return;
-
-            // Store head node
-            Node temp = _head;
-
-            // If head needs to be removed
-            if (position == 0)
-            {
-                _head = temp.Next;   // Change head
-                return;
-            }
-
-            // Find previous node of the node to be deleted
-            for (int i = 0; temp != null && i < position - 1; i++)
-                temp = temp.Next;
-
-            // If position is more than number of ndoes
-            if (temp == null || temp.Next == null)
-                return;
-
-            // Node temp->next is the node to be deleted
-            // Store pointer to the next of node to be deleted
-            Node next = temp.Next.Next;
-
-            temp.Next = next;  // Unlink the deleted node from list
+            return false;
         }
     }
 }

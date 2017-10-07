@@ -11,12 +11,18 @@ namespace DataStructures
         static void Main(string[] args)
         {
             var LinkedList = new SinglyLinkedList();
-            var Node1 = new Node();
-            Node1.Data = 1;
-            var Node2 = new Node();
-            Node2.Data = 2;
-            var Node3 = new Node();
-            Node3.Data = 3;
+            var Node1 = new SingleNode
+            {
+                Data = 1
+            };
+            var Node2 = new SingleNode
+            {
+                Data = 2
+            };
+            var Node3 = new SingleNode
+            {
+                Data = 3
+            };
 
             LinkedList.AddToBeginning(Node1);
             LinkedList.AddToBeginning(Node2);
@@ -24,9 +30,25 @@ namespace DataStructures
 
             LinkedList.DeleteNode(Node2);
 
-            //LinkedList.AddToEnd(Node1);
-            //LinkedList.AddToEnd(Node2);
-            //LinkedList.AddToEnd(Node3);
+            var Node4 = new DoublyNode
+            {
+                Data = 4
+            };
+            var Node5 = new DoublyNode
+            {
+                Data = 5
+            };
+            var Node6 = new DoublyNode
+            {
+                Data = 6
+            };
+
+            var DoublyLinkedList = new DoublyLinkedList();
+            DoublyLinkedList.AddToTail(Node4);
+            DoublyLinkedList.AddToTail(Node5);
+            DoublyLinkedList.AddToTail(Node6);
+
+
         }
     }
 }

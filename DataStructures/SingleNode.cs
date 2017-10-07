@@ -1,8 +1,8 @@
 ﻿namespace DataStructures
 {
-    public class Node
+    public class SingleNode
     {
-        public Node Next;
+        public SingleNode Next;
         public int Data;
     }
 }
