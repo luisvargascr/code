@@ -48,6 +48,7 @@
     <Compile Include="FindNElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveDuplicates.cs" />
+    <Compile Include="RemoveMiddleElement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

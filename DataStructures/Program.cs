@@ -1,9 +1,4 @@
 ﻿using ChapterTwo;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataStructures
 {
@@ -60,6 +55,9 @@ namespace DataStructures
 
             var NElement = new FindNElement();
             var Node = NElement.FindNToEnd(new SingleNode() { Data = 3 });
+
+            var MiddleElement = new RemoveMiddleElement();
+            MiddleElement.DeleteNodeInMiddle();
         }
     }
 }
