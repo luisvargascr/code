@@ -42,6 +42,9 @@ namespace ChapterTwo
             LinkedList.AddToEnd(SingleNode5);
             LinkedList.AddToEnd(SingleNode6);
         }
+        /// <summary>
+        /// RemoveDuplicateValues method does not work. It goes through the entire list and tries to "skip" but it does not delete.
+        /// </summary>
         public void RemoveDuplicateValues()
         {
             SingleNode tmp = LinkedList.Head;
@@ -70,6 +73,30 @@ namespace ChapterTwo
                     }
                 }
                 tmp = tmp.Next;
+            }
+        }
+
+        /// <summary>
+        /// RemoveDuplicate method works and it removes duplicate values from the whole list.
+        /// </summary>
+        public void RemoveDuplicate()
+        {
+            var hits = new Dictionary<int, bool>();
+            SingleNode previous = null;
+            SingleNode node = LinkedList.Head;
+
+            while (node != null)
+            {
+                if (hits.ContainsKey(node.Data))
+                {
+                    previous.Next = node.Next;
+                }
+                else
+                {
+                    hits.Add(node.Data, true);
+                    previous = node;
+                }
+                node = node.Next;
             }
         }
     }
