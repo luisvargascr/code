@@ -55,8 +55,11 @@ namespace DataStructures
             CircularLinkedList.AddToHead(Node6);
             CircularLinkedList.DeleteNote(Node5);
 
-            var remove = new RemoveDuplicates();
-            remove.RemoveDuplicateNoHashNorDic();
+            //var remove = new RemoveDuplicates();
+            //remove.RemoveDuplicateNoHashNorDic();
+
+            var NElement = new FindNElement();
+            var Node = NElement.FindNToEnd(new SingleNode() { Data = 3 });
         }
     }
 }
