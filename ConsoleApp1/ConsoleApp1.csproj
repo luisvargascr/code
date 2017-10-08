@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B0D2F64D-19A9-46AF-AF2B-37BE973603BE}</ProjectGuid>
+    <ProjectGuid>{D77DABEE-A9E2-48C3-899E-747A6F32EFD8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DataStructures</RootNamespace>
-    <AssemblyName>DataStructures</AssemblyName>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,16 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp1\ChapterTwo.csproj">
-      <Project>{d77dabee-a9e2-48c3-899e-747a6f32efd8}</Project>
-      <Name>ChapterTwo</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataStructuresLibrart\DataStructuresLibrary.csproj">
-      <Project>{0bc30f5d-391a-49a4-b6f9-ad06092a283b}</Project>
-      <Name>DataStructuresLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

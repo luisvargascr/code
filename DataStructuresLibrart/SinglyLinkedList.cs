@@ -3,6 +3,10 @@
     public class SinglyLinkedList
     {
         private SingleNode _head;
+        public SingleNode Head
+        {
+            get { return _head; }
+        }
 
         public void AddToBeginning(SingleNode node)
         {

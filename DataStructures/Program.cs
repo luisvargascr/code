@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChapterTwo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -53,6 +54,9 @@ namespace DataStructures
             CircularLinkedList.AddToHead(Node5);
             CircularLinkedList.AddToHead(Node6);
             CircularLinkedList.DeleteNote(Node5);
+
+            var remove = new RemoveDuplicates();
+            remove.RemoveDuplicateValues();
         }
     }
 }
