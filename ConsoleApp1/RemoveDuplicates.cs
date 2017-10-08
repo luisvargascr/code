@@ -77,6 +77,7 @@ namespace ChapterTwo
         }
 
         /// <summary>
+        /// Write code to remove duplicates from an unsorted linked list.
         /// RemoveDuplicate method works and it removes duplicate values from the whole list.
         /// </summary>
         public void RemoveDuplicate()
@@ -97,6 +98,41 @@ namespace ChapterTwo
                     previous = node;
                 }
                 node = node.Next;
+            }
+        }
+        /// <summary>
+        /// FOLLOW UP: How would you solve this problem if a temporary buffer is not allowed?
+        /// </summary>
+        public void RemoveDuplicateNoHashNorDic()
+        {
+            if (LinkedList.Head == null) return;
+
+            SingleNode Previous = LinkedList.Head;
+            SingleNode Current = Previous.Next;
+
+            while (Current != null)
+            {
+                SingleNode Runner = LinkedList.Head;
+
+                while (Runner != Current)
+                {
+                    if (Runner.Data == Current.Data)
+                    {
+                        // Removes current
+                        SingleNode Tmp = Current.Next;
+                        Previous.Next = Tmp;
+
+                        // Updates current to next node
+                        Current = Tmp;
+                        break;
+                    }
+                    Runner = Runner.Next;
+                }
+                if (Runner == Current)
+                {
+                    Previous = Current;
+                    Current = Current.Next;
+                }
             }
         }
     }

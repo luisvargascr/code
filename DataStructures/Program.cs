@@ -56,7 +56,7 @@ namespace DataStructures
             CircularLinkedList.DeleteNote(Node5);
 
             var remove = new RemoveDuplicates();
-            remove.RemoveDuplicate();
+            remove.RemoveDuplicateNoHashNorDic();
         }
     }
 }
