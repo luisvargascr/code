@@ -52,17 +52,17 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp1\ChapterTwo.csproj">
+    <Content Include="Note.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChapterTwo\ChapterTwo.csproj">
       <Project>{d77dabee-a9e2-48c3-899e-747a6f32efd8}</Project>
       <Name>ChapterTwo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataStructuresLibrart\DataStructuresLibrary.csproj">
+    <ProjectReference Include="..\DataStructuresLibrary\DataStructuresLibrary.csproj">
       <Project>{0bc30f5d-391a-49a4-b6f9-ad06092a283b}</Project>
       <Name>DataStructuresLibrary</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Note.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

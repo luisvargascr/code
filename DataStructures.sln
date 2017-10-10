@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures", "DataStructures\DataStructures.csproj", "{B0D2F64D-19A9-46AF-AF2B-37BE973603BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapterTwo", "ConsoleApp1\ChapterTwo.csproj", "{D77DABEE-A9E2-48C3-899E-747A6F32EFD8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapterTwo", "ChapterTwo\ChapterTwo.csproj", "{D77DABEE-A9E2-48C3-899E-747A6F32EFD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresLibrary", "DataStructuresLibrart\DataStructuresLibrary.csproj", "{0BC30F5D-391A-49A4-B6F9-AD06092A283B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresLibrary", "DataStructuresLibrary\DataStructuresLibrary.csproj", "{0BC30F5D-391A-49A4-B6F9-AD06092A283B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
