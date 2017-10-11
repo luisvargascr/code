@@ -1,1 +1,11 @@
 ﻿https://careercup.com/page?pid=google-interview-questions
+
+Problems to solve with trees:
+1) Size of Tree
+2) Height of Tree
+3) Find an element in a Tree
+4) Find a Max/Min Element in a Tree
+5) Find Number of Leaf Nodes
+6) Find Number of Full Nodes
+7) Print the Deepest Node
+
