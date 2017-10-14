@@ -1,4 +1,5 @@
-﻿using ChapterOne;
+﻿using ChapterFour;
+using ChapterOne;
 using ChapterTwo;
 using System;
 
@@ -65,7 +66,25 @@ namespace DataStructures
 
             var hashPractice = new HashPractice(MyValues);
             hashPractice.ReturnSingleItems();
-            Console.ReadLine();
+            // Console.ReadLine();
+
+
+            var GraphNetwork = new Graph();
+            GraphNetwork.AddEdge(0, 1);
+            GraphNetwork.AddEdge(1, 2);
+            GraphNetwork.AddEdge(2, 3);
+            GraphNetwork.AddEdge(3, 4);
+            GraphNetwork.AddEdge(4, 5);
+
+            // GraphNetwork.AddEdge(5, 6);
+            GraphNetwork.AddEdge(6, 7);
+            GraphNetwork.AddEdge(7, 8);
+            GraphNetwork.AddEdge(8, 9);
+            GraphNetwork.AddEdge(5, 0);
+            GraphNetwork.AddEdge(9, 4);
+
+            Console.WriteLine (GraphNetwork.HasPathDFS(0, 9));
+            Console.ReadKey();
         }
     }
 }

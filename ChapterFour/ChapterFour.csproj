@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B0D2F64D-19A9-46AF-AF2B-37BE973603BE}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>DataStructures</RootNamespace>
-    <AssemblyName>DataStructures</AssemblyName>
+    <ProjectGuid>{CB3B56DD-97A1-4695-BCDA-64284F35D8CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChapterFour</RootNamespace>
+    <AssemblyName>ChapterFour</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,31 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Graph.cs" />
+    <Compile Include="Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <Content Include="Syllabus\SkillSet.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Note.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ChapterFour\ChapterFour.csproj">
-      <Project>{cb3b56dd-97a1-4695-bcda-64284f35d8ce}</Project>
-      <Name>ChapterFour</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ChapterOne\ChapterOne.csproj">
-      <Project>{e0a9b717-1cb2-49c1-8d61-4e3fdcdc9e70}</Project>
-      <Name>ChapterOne</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ChapterTwo\ChapterTwo.csproj">
-      <Project>{d77dabee-a9e2-48c3-899e-747a6f32efd8}</Project>
-      <Name>ChapterTwo</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DataStructuresLibrary\DataStructuresLibrary.csproj">
       <Project>{0bc30f5d-391a-49a4-b6f9-ad06092a283b}</Project>
       <Name>DataStructuresLibrary</Name>
