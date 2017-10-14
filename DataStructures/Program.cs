@@ -1,4 +1,6 @@
-﻿using ChapterTwo;
+﻿using ChapterOne;
+using ChapterTwo;
+using System;
 
 namespace DataStructures
 {
@@ -58,6 +60,12 @@ namespace DataStructures
 
             var MiddleElement = new RemoveMiddleElement();
             MiddleElement.DeleteNodeInMiddle();
+
+            string[] MyValues = { "Caroline", "Caroline", "Luis", "Carlos", "John", "Maria", "Caroline", "Carlos" };
+
+            var hashPractice = new HashPractice(MyValues);
+            hashPractice.ReturnSingleItems();
+            Console.ReadLine();
         }
     }
 }
