@@ -69,7 +69,7 @@ namespace ChapterFour
         {
             LinkedList<Node> nextToVisit = new LinkedList<Node>();
             HashSet<int> visited = new HashSet<int>();
-            nextToVisit.AddFirst(source);
+            nextToVisit.AddLast(source);
 
             while (nextToVisit.Count() > 0)
             {
@@ -82,7 +82,6 @@ namespace ChapterFour
                     Console.WriteLine(string.Format("--> Found! {0}, {1}", source.id, destination.id));
                     return true;
                 }
-
                 if (visited.Contains(node.id))
                 {
                     Console.WriteLine(string.Format("Node {0} already visited!", node.id));
