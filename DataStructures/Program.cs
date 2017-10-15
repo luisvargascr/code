@@ -88,6 +88,22 @@ namespace DataStructures
 
             Console.WriteLine(GraphNetwork.HasPathBFS(0, 9));
             Console.WriteLine("------------------------------------");
+           
+
+            TreeNode root = new TreeNode(5);
+            root.left = new TreeNode(10);
+            root.right = new TreeNode(15);
+            root.left.left = new TreeNode(20);
+            root.left.right = new TreeNode(25);
+            root.right.left = new TreeNode(30);
+            root.right.right = new TreeNode(35);
+            Console.WriteLine(" Is Tree Balanced : " + (new BalancedTree()).checkBalance(root));
+            root.right.right.right = new TreeNode(40);
+            root.right.right.right.right = new TreeNode(45);
+      
+            Console.WriteLine(" Is Tree Balanced : " + (new BalancedTree()).checkBalance(root));
+
+            Console.WriteLine("------------------------------------");
             Console.ReadLine();
         }
     }
