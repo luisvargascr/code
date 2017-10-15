@@ -56,7 +56,6 @@ namespace ChapterFour
             {
                 if (HasPathDFS(child, destination, visited))
                 {
-                    
                     return true;
                 }
             }
@@ -75,14 +74,20 @@ namespace ChapterFour
             while (nextToVisit.Count() > 0)
             {
                 Node node = nextToVisit.FirstOrDefault();
+                Console.WriteLine(string.Format("Entering Node {0}.", node.id));
                 nextToVisit.RemoveFirst();
 
                 if (node == destination)
+                {
+                    Console.WriteLine(string.Format("--> Found! {0}, {1}", source.id, destination.id));
                     return true;
+                }
 
                 if (visited.Contains(node.id))
+                {
+                    Console.WriteLine(string.Format("Node {0} already visited!", node.id));
                     continue;
-
+                }
                 visited.Add(node.id);
 
                 foreach (Node child in node.adjacent)

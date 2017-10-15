@@ -76,7 +76,7 @@ namespace DataStructures
             GraphNetwork.AddEdge(3, 4);
             GraphNetwork.AddEdge(4, 5);
 
-            // GraphNetwork.AddEdge(5, 6);
+            GraphNetwork.AddEdge(5, 6);
             GraphNetwork.AddEdge(6, 7);
             GraphNetwork.AddEdge(7, 8);
             GraphNetwork.AddEdge(8, 9);
@@ -84,7 +84,11 @@ namespace DataStructures
             GraphNetwork.AddEdge(9, 4);
 
             Console.WriteLine (GraphNetwork.HasPathDFS(0, 9));
-            Console.ReadKey();
+            Console.WriteLine("------------------------------------");
+
+            Console.WriteLine(GraphNetwork.HasPathBFS(0, 9));
+            Console.WriteLine("------------------------------------");
+            Console.ReadLine();
         }
     }
 }
