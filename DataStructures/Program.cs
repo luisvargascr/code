@@ -88,7 +88,9 @@ namespace DataStructures
 
             Console.WriteLine(GraphNetwork.HasPathBFS(0, 9));
             Console.WriteLine("------------------------------------");
-           
+
+            // Console.WriteLine(string.Format("Direct Path between Node {0} and Node {1} is {2}",0,9, GraphNetwork.DirectPathAvailable(0, 9).ToString()));
+            GraphNetwork.LevelCounter(0,9);
 
             TreeNode root = new TreeNode(5);
             root.left = new TreeNode(10);

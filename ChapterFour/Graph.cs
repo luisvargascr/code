@@ -96,5 +96,73 @@ namespace ChapterFour
             }
             return false;
         }
+
+        public bool DirectPathAvailable(int sourceId, int destinationId)
+        {
+            return DirectPathAvailable(GetNode(sourceId), GetNode(destinationId));
+        }
+        private bool DirectPathAvailable(Node source, Node destination)
+        {
+            Queue<Node> myQueue = new Queue<Node>();
+            HashSet<int> Visited = new HashSet<int>();
+
+            myQueue.Enqueue(source);
+
+            while (myQueue.Count() > 0)
+            {
+                Node tmp = myQueue.Dequeue();
+
+                if (tmp == destination)
+                    return true;
+                if (Visited.Contains(tmp.id))
+                    continue;
+                Visited.Add(tmp.id);
+
+                foreach (Node child in tmp.adjacent)
+                {
+                    myQueue.Enqueue(child);
+                }
+            }
+            return false;
+        }
+        public void LevelCounter (int s, int d)
+        {
+            Node source = GetNode(s);
+            Node destination = GetNode(d);
+
+            Queue<Node> myQueue = new Queue<Node>();
+            HashSet<int> Visited = new HashSet<int>();
+
+            int Level = 0;
+            int NumVisitedNodes = 0;
+
+            myQueue.Enqueue(source);
+
+            while (myQueue.Count() > 0)
+            {
+                Node tmp = myQueue.Dequeue();
+                NumVisitedNodes++;
+
+                if (tmp == destination)
+                {
+                    Console.WriteLine(string.Format("Number of Visited Nodes: {0}", NumVisitedNodes));
+                    Console.WriteLine(string.Format("Number of Levels in Graph: {0}", Level));
+                    
+                    return;
+                }
+
+                if (Visited.Contains(tmp.id))
+                    continue;
+
+                Visited.Add(tmp.id);
+                Level++;
+
+                foreach (Node child in tmp.adjacent)
+                {
+                    myQueue.Enqueue(child);
+                }
+            }
+           
+        }
     }
 }
