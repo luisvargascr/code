@@ -9,6 +9,14 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
+            BalancedTree TheTree = new BalancedTree();
+            int[] myArray = new int[9] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+            var FullTree = TheTree.MinHeightTree(myArray,0,myArray.Length - 1);
+
+
+
+
             var LinkedList = new SinglyLinkedList();
             var Node1 = new SingleNode
             {
@@ -102,6 +110,8 @@ namespace DataStructures
             Console.WriteLine(" Is Tree Balanced : " + (new BalancedTree()).checkBalance(root));
             root.right.right.right = new TreeNode(40);
             root.right.right.right.right = new TreeNode(45);
+
+            
       
             Console.WriteLine(" Is Tree Balanced : " + (new BalancedTree()).checkBalance(root));
 
