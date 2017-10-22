@@ -1,4 +1,5 @@
 ﻿using Algorithms.SortingAlgorithms.Insertion;
+using Algorithms.SortingAlgorithms.RadixSort;
 using Algorithms.SortingAlgorithms.Selection;
 using System;
 
@@ -10,6 +11,11 @@ namespace Algorithms
         {
             int[] UnsortedArray1 = new int[] { 7, 8, 5, 4, 9, 2 };
             int[] UnsortedArray2 = new int[] { 7, 8, 5, 4, 9, 2 };
+            int[] UnsortedArray3 = new int[] { 7, 8, 5, 4, 9, 2 };
+
+            var Radix = new RadixSort();
+            Radix.Sort(UnsortedArray1);
+            Console.ReadLine();
 
             var Selection = new SelectionSort();
             var SortedArray1 = Selection.Sort(UnsortedArray1);
