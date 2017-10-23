@@ -2,6 +2,7 @@
 using Algorithms.SortingAlgorithms.RadixSort;
 using Algorithms.SortingAlgorithms.Selection;
 using Algorithms.SortingAlgorithms.Quicksort;
+using Algorithms.SortingAlgorithms.MergeSort;
 using System;
 
 namespace Algorithms
@@ -14,6 +15,12 @@ namespace Algorithms
             int[] UnsortedArray2 = new int[] { 7, 8, 5, 4, 9, 2 };
             int[] UnsortedArray3 = new int[] { 7, 8, 5, 4, 9, 2 };
             int[] UnsortedArray4 = new int[] { 7, 8, 5, 4, 9, 2 };
+            int[] UnsortedArray5 = new int[] { 19,13,1,3,23,5,4,73 };
+
+            var MergeSort = new MergeSort();
+            MergeSort.Sort(UnsortedArray5);
+
+            Console.ReadLine();
 
             var QuickSort = new QuickSort();
             QuickSort.Sort(UnsortedArray4);
