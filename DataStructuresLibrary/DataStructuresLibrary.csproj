@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CircularLinkedList.cs" />
+    <Compile Include="Heap.cs" />
     <Compile Include="DoublyLinkedList.cs" />
     <Compile Include="DoublyNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

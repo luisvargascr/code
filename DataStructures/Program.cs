@@ -1,6 +1,7 @@
 ﻿using ChapterFour;
 using ChapterOne;
 using ChapterTwo;
+using DataStructures;
 using System;
 
 namespace DataStructures
@@ -9,6 +10,16 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
+            Heap MyNewHeap = new Heap();
+            MyNewHeap.Add(89);
+            MyNewHeap.Add(11);
+            MyNewHeap.Add(5);
+            MyNewHeap.Add(23);
+            MyNewHeap.Add(56);
+
+            Console.WriteLine(MyNewHeap.Peek());
+            Console.ReadLine();
+
             BalancedTree TheTree = new BalancedTree();
             int[] myArray = new int[9] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
