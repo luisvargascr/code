@@ -4,49 +4,91 @@ namespace Algorithms.SortingAlgorithms.MergeSort
 {
     public class MergeSort
     {
-        public void Sort(int []array)
+        public void InternalSort(int[] input, int low, int high)
         {
-            int Left = 0;
-            int Right = (array.Length) / 2;
-            int[] TmpArray = new int[array.Length];
-            int Middle = array.Length / 2;
-            int[] FirstHalf = new int[Middle];
-            int[] SecondHalf = new int[Middle];
-
-            for (int cnt = 0; cnt < Middle; cnt++)
-                FirstHalf[cnt] = array[cnt];
-
-            int i = 0;
-            for (int cnt = Middle; cnt < array.Length; cnt++)
+            if (low < high)
             {
-                SecondHalf[i] = array[cnt];
-                i++;
-            }
-
-            Sort(array, TmpArray, Left, Right);
-
-            foreach (int x in array)
-            {
-                Console.WriteLine(x);
+                int middle = (low / 2) + (high / 2);
+                InternalSort(input, low, middle);
+                InternalSort(input, middle + 1, high);
+                Merge(input, low, middle, high);
             }
         }
-        private void Sort (int [] array, int[] tmpArray, int left, int right)
-        {
-            if (array.Length == 1)
-                return;
 
-            for (int x = 0; x < array.Length; x++)
+        public void Sort(int[] input)
+        {
+            InternalSort(input, 0, input.Length - 1);
+        }
+
+        private void Merge(int[] input, int low, int middle, int high)
+        {
+            int left = low;
+            int right = middle + 1;
+            int[] tmp = new int[(high - low) + 1];
+            int tmpIndex = 0;
+
+            while ((left <= middle) && (right <= high))
             {
-                if (array[left] >= tmpArray[x])
+                if (input[left] < input[right])
                 {
-                    int tmp = array[left];
-                    tmpArray[x] = tmp;
-                    array[left] = tmpArray[x];
+                    tmp[tmpIndex] = input[left];
+                    left = left + 1;
+                }
+                else
+                {
+                    tmp[tmpIndex] = input[right];
+                    right = right + 1;
+                }
+                tmpIndex = tmpIndex + 1;
+            }
+
+            if (left <= middle)
+            {
+                while (left <= middle)
+                {
+                    tmp[tmpIndex] = input[left];
+                    left = left + 1;
+                    tmpIndex = tmpIndex + 1;
                 }
             }
-            left++;
 
-           
+            if (right <= high)
+            {
+                while (right <= high)
+                {
+                    tmp[tmpIndex] = input[right];
+                    right = right + 1;
+                    tmpIndex = tmpIndex + 1;
+                }
+            }
+
+            for (int i = 0; i < tmp.Length; i++)
+            {
+                input[low + i] = tmp[i];
+            }
+
+        }
+
+        public string PrintArray(int[] input)
+        {
+            string result = String.Empty;
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                result = result + input[i] + ": ";
+            }
+            if (input.Length == 0)
+            {
+                result = "Array is empty.";
+                Console.WriteLine(result);
+                return result;
+            }
+            else
+            {
+                Console.WriteLine(result);
+                return result;
+            }
         }
     }
 }
+
